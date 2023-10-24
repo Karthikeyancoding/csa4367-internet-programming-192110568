@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stylish Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 1px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form action="registration_process.php" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+            
+            <label for="birthdate">Date of Birth:</label>
+            <input type="date" id="birthdate" name="birthdate">
+            
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male"> Male
+            <input type="radio" id="female" name="gender" value="female"> Female
+            <input type="radio" id="other" name="gender" value="other"> Other
+            
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="us">United States</option>
+                <option value="ca">Canada</option>
+                <option value="uk">United Kingdom</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stylish Complaint Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="submit"],
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Complaint Registration Form</h2>
+        <form action="complaint_process.php" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject of Complaint:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="complaint">Complaint Details:</label>
+            <textarea id="complaint" name="complaint" rows="4" cols="50" required></textarea>
+
+            <input type="submit" value="Submit Complaint">
+        </form>
+    </div>
+</body>
+</html>
